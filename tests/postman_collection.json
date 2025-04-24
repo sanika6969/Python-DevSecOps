@@ -34,9 +34,10 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://{{apphost}}/",
+          "raw": "http://10.25.157.151:5000/",
           "protocol": "http",
-          "host": ["{{apphost}}"],
+          "host": ["10.25.157.151"],
+          "port": "5000",
           "path": [""]
         }
       },
@@ -71,9 +72,10 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://{{apphost}}/info",
+          "raw": "http://10.25.157.151:5000/info",
           "protocol": "http",
-          "host": ["{{apphost}}"],
+          "host": ["10.25.157.151"],
+          "port": "5000",
           "path": ["info"]
         }
       },
@@ -97,10 +99,10 @@
               "",
               "pm.test(\"Process API: Check API response\", function () {",
               "    var processData = pm.response.json();",
-              "    pm.expect(processData.processes).to.be.an('array')",
-              "    pm.expect(processData.processes[0].name).to.be.an('string')",
-              "    pm.expect(processData.processes[0].memory_percent).to.be.an('number')",
-              "    pm.expect(processData.processes[0].pid).to.be.an('number')",
+              "    pm.expect(processData.processes).to.be.an('array');",
+              "    pm.expect(processData.processes[0].name).to.be.an('string');",
+              "    pm.expect(processData.processes[0].memory_percent).to.be.an('number');",
+              "    pm.expect(processData.processes[0].pid).to.be.an('number');",
               "});",
               ""
             ],
@@ -112,9 +114,10 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://{{apphost}}/api/process",
+          "raw": "http://10.25.157.151:5000/api/process",
           "protocol": "http",
-          "host": ["{{apphost}}"],
+          "host": ["10.25.157.151"],
+          "port": "5000",
           "path": ["api", "process"]
         }
       },
